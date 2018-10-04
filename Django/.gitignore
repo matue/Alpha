@@ -1,3 +1,6 @@
 *.log
 venv/*
 local_settings.py
+.idea/inspectionProfiles/
+templates/
+__pycache__
