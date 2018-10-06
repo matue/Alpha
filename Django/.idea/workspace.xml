@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69179610-d5e5-4b20-99a9-70a0ef1cf5d6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../QT/Qt_Framework/Qt_Framework.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QT/Qt_Framework/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/Qt_Framework/Qt_Framework.pro" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/Qt_Framework/Qt_Framework.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/Qt_Framework/Qt_Framework.pro.user" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/Qt_Framework/Qt_Framework.pro.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.ui" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/Qt_Framework/tableeditor.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile.Debug" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile.Debug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile.Release" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/Makefile.Release" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/moc_tableeditor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/moc_tableeditor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/moc_tableeditor.o" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/moc_tableeditor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/tableeditor.o" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/debug/tableeditor.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/ui_tableeditor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../QT/build-Qt_Framework-Desktop_Qt_5_11_2_MinGW_32bit-Debug/ui_tableeditor.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,21 +41,18 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
+        <item name="db [2]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="tab: table" type="ffe0bd85:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -63,6 +67,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tab" pinned="false" current-in-tab="true">
+        <entry file="das://6b9bf316-9f72-4606-a210-f6f4215b8448/schema/main/table/tab">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -91,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Django/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -171,7 +184,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
@@ -243,10 +256,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="0" visible="true" weight="0.32897604" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26812366" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -257,7 +271,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32897604" />
       <window_info anchor="bottom" id="Find" order="2" />
     </layout>
   </component>
@@ -268,6 +281,40 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/table_editor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_editor/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_editor/fixtures/content_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#119#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/table_editor/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -380,13 +427,6 @@
     <entry file="file://$PROJECT_DIR$/table_editor/fixtures/content.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/table_editor/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/table_editor/fixtures/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -431,6 +471,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table_editor/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6b9bf316-9f72-4606-a210-f6f4215b8448/schema/main/table/tab">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

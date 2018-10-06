@@ -29,6 +29,7 @@ public:
     QTableView *tableView;
     QPushButton *Loaddata;
     QPushButton *ConnectToDB;
+    QPushButton *DisconnectFromDB;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -49,6 +50,9 @@ public:
         ConnectToDB = new QPushButton(centralWidget);
         ConnectToDB->setObjectName(QStringLiteral("ConnectToDB"));
         ConnectToDB->setGeometry(QRect(40, 30, 101, 23));
+        DisconnectFromDB = new QPushButton(centralWidget);
+        DisconnectFromDB->setObjectName(QStringLiteral("DisconnectFromDB"));
+        DisconnectFromDB->setGeometry(QRect(160, 30, 111, 23));
         TableEditor->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TableEditor);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -71,6 +75,7 @@ public:
         TableEditor->setWindowTitle(QApplication::translate("TableEditor", "TableEditor", nullptr));
         Loaddata->setText(QApplication::translate("TableEditor", "Load Data", nullptr));
         ConnectToDB->setText(QApplication::translate("TableEditor", "Connect to DB", nullptr));
+        DisconnectFromDB->setText(QApplication::translate("TableEditor", "Disconnect from DB", nullptr));
     } // retranslateUi
 
 };

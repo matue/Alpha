@@ -17,13 +17,17 @@ TableEditor::~TableEditor()
 
 void TableEditor::on_Loaddata_clicked()
 {
-
+    execSql();
 }
 
 void TableEditor::on_ConnectToDB_clicked()
 {
-//    connOpen();
+    connOpen();
 }
 
+void TableEditor::on_DisconnectFromDB_clicked()
+{
+    connClose();
+}
 
 
