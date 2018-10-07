@@ -41,38 +41,28 @@ public:
             return false;
         }
             else {
-                qDebug()<<("Connected");
             return true;
         }
     }
 
-    bool showTable()
+    void showTable()
     {
-        if (!connOpen())
-        {
-            connOpen();
-        }
+        connOpen();
         QSqlQueryModel * myModel=new QSqlQueryModel();
-        QSqlQuery query;
-        query.exec("select * from tab;");
-        if (!query.exec()) {
-            qDebug()<<("Failed");
-            return false;
+        QSqlQuery select;
+        if (!select.exec("select * from tab")) {
+            QMessageBox::critical(this, tr("Error"), select.lastError().text());
         }
         else {
-            qDebug()<<("Success executing");
-            myModel->setQuery(query);
+            myModel->setQuery(select);
             ui->tableView->setModel(myModel);
-            return true;
         }
+        connClose();
     }
 
     void execSQL(QString action)
     {
-        if (!connOpen())
-        {
-            connOpen();
-        }
+        connOpen();
         QSqlQuery SqlQuery;
         QString id, a, b, c, query;
         id=ui->input_id->text();
@@ -99,6 +89,7 @@ public:
         {
             QMessageBox::critical(this, tr("Error"), SqlQuery.lastError().text());
         }
+        connClose();
     }
 
 
