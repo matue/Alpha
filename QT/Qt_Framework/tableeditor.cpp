@@ -22,15 +22,15 @@ void TableEditor::on_Loaddata_clicked()
 
 void TableEditor::on_InsertButton_clicked()
 {
-    insertData();
+    execSQL("insert");
 }
 
 void TableEditor::on_UpdateButton_clicked()
 {
-    updateData();
+    execSQL("update");
 }
 
 void TableEditor::on_DeleteButton_clicked()
 {
-    deleteData();
+    execSQL("delete");
 }

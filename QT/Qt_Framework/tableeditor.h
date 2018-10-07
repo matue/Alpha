@@ -67,98 +67,39 @@ public:
         }
     }
 
-//    void execSQL(QString query)
-//    {
-//        if (!connOpen())
-//        {
-//            connOpen();
-//        }
-//        QString id, a, b, c;
-//        id=ui->input_id->text();
-//        a=ui->input_a->text();
-//        b=ui->input_b->text();
-//        c=ui->input_c->text();
-//        QSqlQuery SqlQuery;
-//        if(SqlQuery.exec(query))
-//        {
-//            QMessageBox::information(this, tr("Success"),tr("Done"));
-//    }
-//        else
-//        {
-//            QMessageBox::critical(this, tr("Error"), SqlQuery.lastError().text());
-//        }
-//    }
-
-    void insertData()
+    void execSQL(QString action)
     {
         if (!connOpen())
         {
             connOpen();
         }
-        execSQL("select * from tab");
-        QString id, a, b, c;
+        QSqlQuery SqlQuery;
+        QString id, a, b, c, query;
         id=ui->input_id->text();
         a=ui->input_a->text();
         b=ui->input_b->text();
         c=ui->input_c->text();
-        QSqlQuery insertQuery;
-        if (insertQuery.exec("insert into tab (id, a, b, c) values ('"+id+"','"+a+"','"+b+"','"+c+"');"))
+        if (action=="insert")
+        {
+            query="insert into tab (id, a, b, c) values ('"+id+"','"+a+"','"+b+"','"+c+"')";
+        }
+        if (action=="update")
+        {
+            query="update tab set id='"+id+"', a='"+a+"', b='"+b+"', c='"+c+"' where id='"+id+"'";
+        }
+        if (action=="delete")
+        {
+            query="delete from tab where id='"+id+"'";
+        }
+        if(SqlQuery.exec(query))
         {
             QMessageBox::information(this, tr("Success"),tr("Done"));
-            connClose();
         }
         else
         {
-            QMessageBox::critical(this, tr("Error"), insertQuery.lastError().text());
+            QMessageBox::critical(this, tr("Error"), SqlQuery.lastError().text());
         }
     }
-
-    void updateData()
-    {
-        if (!connOpen())
-        {
-            connOpen();
-        }
-        QString id, a, b, c;
-        id=ui->input_id->text();
-        a=ui->input_a->text();
-        b=ui->input_b->text();
-        c=ui->input_c->text();
-        QSqlQuery updateQuery;
-        if (updateQuery.exec("update tab set id='"+id+"', a='"+a+"', b='"+b+"', c='"+c+"' where id='"+id+"'"))
-        {
-            QMessageBox::information(this, tr("Success"),tr("Done"));
-            connClose();
-        }
-        else
-        {
-            QMessageBox::critical(this, tr("Error"), updateQuery.lastError().text());
-        }
-    }
-
-    void deleteData()
-    {
-        if (!connOpen())
-        {
-            connOpen();
-        }
-        QString id, a, b, c;
-        id=ui->input_id->text();
-        a=ui->input_a->text();
-        b=ui->input_b->text();
-        c=ui->input_c->text();
-        QSqlQuery updateQuery;
-        if (updateQuery.exec("delete from tab where id='"+id+"'"))
-        {
-            QMessageBox::information(this, tr("Success"),tr("Done"));
-            connClose();
-        }
-        else
-        {
-            QMessageBox::critical(this, tr("Error"), updateQuery.lastError().text());
-        }
-    }
-
 
 
 private slots:
