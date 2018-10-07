@@ -17,17 +17,20 @@ TableEditor::~TableEditor()
 
 void TableEditor::on_Loaddata_clicked()
 {
-    execSql();
+    showTable();
 }
 
-void TableEditor::on_ConnectToDB_clicked()
+void TableEditor::on_InsertButton_clicked()
 {
-    connOpen();
+    insertData();
 }
 
-void TableEditor::on_DisconnectFromDB_clicked()
+void TableEditor::on_UpdateButton_clicked()
 {
-    connClose();
+    updateData();
 }
 
-
+void TableEditor::on_DeleteButton_clicked()
+{
+    deleteData();
+}

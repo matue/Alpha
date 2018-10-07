@@ -19,7 +19,7 @@
      <rect>
       <x>40</x>
       <y>120</y>
-      <width>901</width>
+      <width>491</width>
       <height>391</height>
      </rect>
     </property>
@@ -28,39 +28,144 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>60</y>
-      <width>75</width>
+      <y>30</y>
+      <width>141</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Load Data</string>
+     <string>Load/Refresh Data</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="ConnectToDB">
+   <widget class="QPushButton" name="InsertButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>101</width>
+      <x>620</x>
+      <y>280</y>
+      <width>81</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Connect to DB</string>
+     <string>Insert</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="DisconnectFromDB">
+   <widget class="QLineEdit" name="input_id">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>111</width>
+      <x>620</x>
+      <y>120</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_a">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>160</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_b">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>200</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_c">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>240</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>120</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Id</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>160</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>A</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>200</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>B</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>240</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="UpdateButton">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>280</y>
+      <width>81</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Disconnect from DB</string>
+     <string>Update by Id</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DeleteButton">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>280</y>
+      <width>81</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete by Id</string>
     </property>
    </widget>
   </widget>
