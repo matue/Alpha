@@ -34,3 +34,4 @@ void TableEditor::on_DeleteButton_clicked()
 {
     execSQL("delete");
 }
+

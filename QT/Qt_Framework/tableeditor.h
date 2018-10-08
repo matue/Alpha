@@ -7,6 +7,7 @@
 #include <QMessageBox>
 
 
+
 namespace Ui {
 class TableEditor;
 }
@@ -50,7 +51,7 @@ public:
         QSqlQueryModel * myModel=new QSqlQueryModel();
         QSqlQuery select;
         if (!select.exec("select * from tab")) {
-            QMessageBox::critical(this, tr("Error"), select.lastError().text());
+            ui->listWidget->addItem("Error");
         }
         else {
            myModel->setQuery(select);
@@ -58,6 +59,7 @@ public:
            proxyModel->setSourceModel(myModel);
            ui->tableView->setSortingEnabled(true); // enable sortingEnabled
            ui->tableView->setModel(proxyModel);
+           ui->listWidget->addItem("Success execute");
            }
            connClose();
     }
