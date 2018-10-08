@@ -24,4 +24,4 @@
   ```
   manage.py loaddata content.json
   ```
-*
+
