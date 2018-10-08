@@ -1,10 +1,12 @@
 # https://djbook.ru/rel1.5/howto/initial-data.html
-# генератор контента в формате json для заполнения БД через django
+# Генератор контента в формате json для заполнения БД через django.
+# Загрузить данные: выполните команду manage.py loaddata content.json.
+
 
 import json
 import random
 
-n = 200  # записей
+n = 50  # записей
 
 with open('content.json', 'w', encoding='utf-8') as content:
     content.write('[')
