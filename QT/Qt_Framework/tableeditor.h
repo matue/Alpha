@@ -31,9 +31,7 @@ public:
 
     void connOpen()
     {        
-        QString path;
-        path=ui->input_path->text();
-        ui->listWidget->addItem("Opening " +path);
+        QString path=ui->input_path->text();
         mydb=QSqlDatabase::addDatabase("QSQLITE");
         mydb.setDatabaseName(path);
         mydb.open();
@@ -44,8 +42,10 @@ public:
         connOpen();
         QSqlQueryModel * myModel=new QSqlQueryModel();
         QSqlQuery select;
-        if (!select.exec("select * from tab")) {
+        QString query=ui->input_query->text();
+        if (!select.exec(query)) {
             ui->listWidget->addItem(select.lastError().text());
+            ui->listWidget->scrollToBottom();
         }
         else {
            myModel->setQuery(select);
@@ -53,7 +53,8 @@ public:
            proxyModel->setSourceModel(myModel);
            ui->tableView->setSortingEnabled(true); // enable sortingEnabled
            ui->tableView->setModel(proxyModel);
-           ui->listWidget->addItem("Success execute");
+           ui->listWidget->addItem("Success execute: " +query);
+           ui->listWidget->scrollToBottom();
            }
            connClose();
     }
@@ -62,11 +63,11 @@ public:
     {
         connOpen();
         QSqlQuery SqlQuery;
-        QString id, a, b, c, query;
-        id=ui->input_id->text();
-        a=ui->input_a->text();
-        b=ui->input_b->text();
-        c=ui->input_c->text();
+        QString query;
+        QString id=ui->input_id->text();
+        QString a=ui->input_a->text();
+        QString b=ui->input_b->text();
+        QString c=ui->input_c->text();
 
         if (action=="insert")
         {
@@ -83,11 +84,13 @@ public:
 
         if(SqlQuery.exec(query))
         {
-           ui->listWidget->addItem("Success execute");
+           ui->listWidget->addItem("Success execute: " + query);
+           ui->listWidget->scrollToBottom();
         }
         else
         {
            ui->listWidget->addItem("Execute error");
+           ui->listWidget->scrollToBottom();
         }
         connClose();
     }

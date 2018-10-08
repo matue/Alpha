@@ -6,214 +6,138 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>625</height>
+    <width>809</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>TableEditor</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>581</width>
-      <height>481</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="Loaddata">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>99</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Load/Refresh Data</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="InsertButton">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>171</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Insert</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_id">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>67</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_a">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>93</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_b">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>119</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_c">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>145</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>719</x>
-      <y>67</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Id</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>719</x>
-      <y>93</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>A</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>719</x>
-      <y>119</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>B</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>719</x>
-      <y>145</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>C</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="UpdateButton">
-    <property name="geometry">
-     <rect>
-      <x>822</x>
-      <y>171</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Update by Id</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="DeleteButton">
-    <property name="geometry">
-     <rect>
-      <x>910</x>
-      <y>171</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Delete by Id</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>735</x>
-      <y>200</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_path">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>10</y>
-      <width>421</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>../db.sqlite3</string>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>41</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Path:</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Path:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2">
+     <widget class="QLineEdit" name="input_path">
+      <property name="text">
+       <string>../db.sqlite3</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4" colspan="3">
+     <widget class="QLineEdit" name="input_id"/>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QPushButton" name="Loaddata">
+      <property name="text">
+       <string>Execute:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="input_query">
+      <property name="text">
+       <string>select * from tab</string>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>a</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4" colspan="3">
+     <widget class="QLineEdit" name="input_a"/>
+    </item>
+    <item row="2" column="0" rowspan="5" colspan="3">
+     <widget class="QTableView" name="tableView"/>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>b</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4" colspan="3">
+     <widget class="QLineEdit" name="input_b"/>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>c</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4" colspan="3">
+     <widget class="QLineEdit" name="input_c"/>
+    </item>
+    <item row="4" column="4">
+     <widget class="QPushButton" name="InsertButton">
+      <property name="text">
+       <string>Insert</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QPushButton" name="UpdateButton">
+      <property name="text">
+       <string>Update by Id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="6">
+     <widget class="QPushButton" name="DeleteButton">
+      <property name="text">
+       <string>Delete by Id</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3" colspan="2">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Out:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3" colspan="4">
+     <widget class="QListWidget" name="listWidget">
+      <property name="autoScrollMargin">
+       <number>16</number>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::ElideRight</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
+     <width>809</width>
      <height>21</height>
     </rect>
    </property>
