@@ -20,7 +20,7 @@
 ## Примечания/полезная информация:
 
 * Приложения написанные на **Python/Django Framework** и **C++/Qt Framework** используют один и тот же файл БД **"db.sqlite3"**, расположенный в корне приложений.
-* Для генерации значений и заполнения ими БД использовался скрипт **..\Django\table_editor\fixtures\content_generator.py**. Скрипт генерирует файл **content.json** который загружается в БД командой:
+* Для генерации значений и заполнения ими БД использовался скрипт ..\Django\table_editor\fixtures\content_generator.py. Скрипт генерирует файл **content.json** который загружается в БД командой:
   ```
   manage.py loaddata content.json
   ```
