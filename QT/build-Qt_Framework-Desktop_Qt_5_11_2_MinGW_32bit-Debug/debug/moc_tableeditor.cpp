@@ -32,14 +32,14 @@ struct qt_meta_stringdata_TableEditor_t {
 static const qt_meta_stringdata_TableEditor_t qt_meta_stringdata_TableEditor = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "TableEditor"
-QT_MOC_LITERAL(1, 12, 19), // "on_Loaddata_clicked"
+QT_MOC_LITERAL(1, 12, 19), // "on_LoadData_clicked"
 QT_MOC_LITERAL(2, 32, 0), // ""
 QT_MOC_LITERAL(3, 33, 23), // "on_InsertButton_clicked"
 QT_MOC_LITERAL(4, 57, 23), // "on_UpdateButton_clicked"
 QT_MOC_LITERAL(5, 81, 23) // "on_DeleteButton_clicked"
 
     },
-    "TableEditor\0on_Loaddata_clicked\0\0"
+    "TableEditor\0on_LoadData_clicked\0\0"
     "on_InsertButton_clicked\0on_UpdateButton_clicked\0"
     "on_DeleteButton_clicked"
 };
@@ -79,7 +79,7 @@ void TableEditor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         TableEditor *_t = static_cast<TableEditor *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_Loaddata_clicked(); break;
+        case 0: _t->on_LoadData_clicked(); break;
         case 1: _t->on_InsertButton_clicked(); break;
         case 2: _t->on_UpdateButton_clicked(); break;
         case 3: _t->on_DeleteButton_clicked(); break;

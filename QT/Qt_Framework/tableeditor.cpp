@@ -1,6 +1,4 @@
 #include "tableeditor.h"
-#include "ui_tableeditor.h"
-#include <QTableView>
 
 TableEditor::TableEditor(QWidget *parent) :
     QMainWindow(parent),
@@ -15,23 +13,19 @@ TableEditor::~TableEditor()
     delete ui;
 }
 
-void TableEditor::on_Loaddata_clicked()
-{
+void TableEditor::on_LoadData_clicked() {
     showTable();
 }
 
-void TableEditor::on_InsertButton_clicked()
-{
-    execSQL("insert");
+void TableEditor::on_InsertButton_clicked() {
+    executeSQL("insert");
 }
 
-void TableEditor::on_UpdateButton_clicked()
-{
-    execSQL("update");
+void TableEditor::on_UpdateButton_clicked() {
+    executeSQL("update");
 }
 
-void TableEditor::on_DeleteButton_clicked()
-{
-    execSQL("delete");
+void TableEditor::on_DeleteButton_clicked() {
+    executeSQL("delete");
 }
 

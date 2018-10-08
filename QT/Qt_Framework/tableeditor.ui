@@ -43,7 +43,7 @@
      <widget class="QLineEdit" name="input_id"/>
     </item>
     <item row="1" column="0" colspan="2">
-     <widget class="QPushButton" name="Loaddata">
+     <widget class="QPushButton" name="LoadData">
       <property name="text">
        <string>Execute:</string>
       </property>

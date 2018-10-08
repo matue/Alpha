@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QtSql>
 #include <ui_tableeditor.h>
-#include <QMessageBox>
+
 
 
 namespace Ui {
@@ -22,82 +22,66 @@ public:
 public:
     QSqlDatabase mydb;
 
-    void connClose()
-    {
-        mydb.close();
-        mydb=QSqlDatabase();
-        mydb.removeDatabase(QSqlDatabase::defaultConnection);
-    }
-
-    void connOpen()
-    {        
+    void openConnection() {
         QString path=ui->input_path->text();
         mydb=QSqlDatabase::addDatabase("QSQLITE");
         mydb.setDatabaseName(path);
         mydb.open();
     }
 
-    void showTable()
-    {
-        connOpen();
-        QSqlQueryModel * myModel=new QSqlQueryModel();
-        QSqlQuery select;
+    void closeConnection() {
+        mydb.close();
+        mydb=QSqlDatabase();
+        mydb.removeDatabase(QSqlDatabase::defaultConnection);
+    }
+
+    void showTable() {
+        openConnection();
+        QSqlQueryModel* myModel=new QSqlQueryModel();
+        QSqlQuery sqlQuery;
         QString query=ui->input_query->text();
-        if (!select.exec(query)) {
-            ui->listWidget->addItem(select.lastError().text());
+        if (!sqlQuery.exec(query)) {
+            ui->listWidget->addItem(sqlQuery.lastError().text());
             ui->listWidget->scrollToBottom();
         }
         else {
-           myModel->setQuery(select);
-           QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(myModel); // create proxy
+           myModel->setQuery(sqlQuery);
+           QSortFilterProxyModel* proxyModel = new QSortFilterProxyModel(myModel);
            proxyModel->setSourceModel(myModel);
-           ui->tableView->setSortingEnabled(true); // enable sortingEnabled
+           ui->tableView->setSortingEnabled(true);
            ui->tableView->setModel(proxyModel);
            ui->listWidget->addItem("Success execute: " +query);
            ui->listWidget->scrollToBottom();
-           }
-           connClose();
+         }
+         closeConnection();
     }
 
-    void execSQL(QString action)
-    {
-        connOpen();
-        QSqlQuery SqlQuery;
+    void executeSQL(QString action) {
+        openConnection();
+        QSqlQuery sqlQuery;
         QString query;
         QString id=ui->input_id->text();
         QString a=ui->input_a->text();
         QString b=ui->input_b->text();
         QString c=ui->input_c->text();
 
-        if (action=="insert")
-        {
-            query="insert into tab (id, a, b, c) values ('"+id+"','"+a+"','"+b+"','"+c+"')";
-        }
-        else if (action=="update")
-        {
-            query="update tab set id='"+id+"', a='"+a+"', b='"+b+"', c='"+c+"' where id='"+id+"'";
-        }
-        else if (action=="delete")
-        {
-            query="delete from tab where id='"+id+"'";
-        }
+        if      (action=="insert") query="insert into tab (id, a, b, c) values ('"+id+"','"+a+"','"+b+"','"+c+"')";
+        else if (action=="update") query="update tab set id='"+id+"', a='"+a+"', b='"+b+"', c='"+c+"' where id='"+id+"'";
+        else if (action=="delete") query="delete from tab where id='"+id+"'";
 
-        if(SqlQuery.exec(query))
-        {
+        if(sqlQuery.exec(query)) {
            ui->listWidget->addItem("Success execute: " + query);
            ui->listWidget->scrollToBottom();
         }
-        else
-        {
+        else {
            ui->listWidget->addItem("Execute error");
            ui->listWidget->scrollToBottom();
         }
-        connClose();
+        closeConnection();
     }
 
-
 private slots:
-    void on_Loaddata_clicked();
+    void on_LoadData_clicked();
 
     void on_InsertButton_clicked();
 
@@ -106,7 +90,7 @@ private slots:
     void on_DeleteButton_clicked();
 
 private:
-    Ui::TableEditor *ui;
+    Ui::TableEditor* ui;
 };
 
 #endif // TABLEEDITOR_H
