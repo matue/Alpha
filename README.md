@@ -1,6 +1,8 @@
 ## Используемое ПО:
 
-## Библиотеки:
+##Библиотеки:
+
 * [python 3.6](https://www.python.org/downloads/release/python-360/)
 * [django 2.1.2](https://www.djangoproject.com/download/)
+* [Qt 5.11.2](https://www.djangoproject.com/download/)
 
