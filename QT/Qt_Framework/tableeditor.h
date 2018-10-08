@@ -5,7 +5,6 @@
 #include <QtSql>
 #include <ui_tableeditor.h>
 #include <QMessageBox>
-#include <qstring>
 
 
 namespace Ui {
@@ -54,10 +53,13 @@ public:
             QMessageBox::critical(this, tr("Error"), select.lastError().text());
         }
         else {
-            myModel->setQuery(select);
-            ui->tableView->setModel(myModel);
-        }
-        connClose();
+           myModel->setQuery(select);
+           QSortFilterProxyModel *proxyModel = new QSortFilterProxyModel(myModel); // create proxy
+           proxyModel->setSourceModel(myModel);
+           ui->tableView->setSortingEnabled(true); // enable sortingEnabled
+           ui->tableView->setModel(proxyModel);
+           }
+           connClose();
     }
 
     void execSQL(QString action)
