@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -30,21 +29,22 @@ class Ui_TableEditor
 {
 public:
     QWidget *centralWidget;
-    QGridLayout *gridLayout;
-    QPushButton *Loaddata;
     QTableView *tableView;
-    QLabel *label;
-    QLineEdit *input_id;
-    QLabel *label_2;
-    QLineEdit *input_a;
-    QLabel *label_3;
-    QLineEdit *input_b;
-    QLabel *label_4;
-    QLineEdit *input_c;
+    QPushButton *Loaddata;
     QPushButton *InsertButton;
+    QLineEdit *input_id;
+    QLineEdit *input_a;
+    QLineEdit *input_b;
+    QLineEdit *input_c;
+    QLabel *label;
+    QLabel *label_2;
+    QLabel *label_3;
+    QLabel *label_4;
     QPushButton *UpdateButton;
     QPushButton *DeleteButton;
     QListWidget *listWidget;
+    QLineEdit *input_path;
+    QLabel *label_5;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -56,80 +56,54 @@ public:
         TableEditor->resize(1000, 625);
         centralWidget = new QWidget(TableEditor);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        gridLayout = new QGridLayout(centralWidget);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        Loaddata = new QPushButton(centralWidget);
-        Loaddata->setObjectName(QStringLiteral("Loaddata"));
-
-        gridLayout->addWidget(Loaddata, 0, 0, 1, 1);
-
         tableView = new QTableView(centralWidget);
         tableView->setObjectName(QStringLiteral("tableView"));
-
-        gridLayout->addWidget(tableView, 1, 0, 6, 1);
-
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout->addWidget(label, 1, 1, 1, 1);
-
-        input_id = new QLineEdit(centralWidget);
-        input_id->setObjectName(QStringLiteral("input_id"));
-
-        gridLayout->addWidget(input_id, 1, 2, 1, 2);
-
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        gridLayout->addWidget(label_2, 2, 1, 1, 1);
-
-        input_a = new QLineEdit(centralWidget);
-        input_a->setObjectName(QStringLiteral("input_a"));
-
-        gridLayout->addWidget(input_a, 2, 2, 1, 2);
-
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout->addWidget(label_3, 3, 1, 1, 1);
-
-        input_b = new QLineEdit(centralWidget);
-        input_b->setObjectName(QStringLiteral("input_b"));
-
-        gridLayout->addWidget(input_b, 3, 2, 1, 2);
-
-        label_4 = new QLabel(centralWidget);
-        label_4->setObjectName(QStringLiteral("label_4"));
-
-        gridLayout->addWidget(label_4, 4, 1, 1, 1);
-
-        input_c = new QLineEdit(centralWidget);
-        input_c->setObjectName(QStringLiteral("input_c"));
-
-        gridLayout->addWidget(input_c, 4, 2, 1, 2);
-
+        tableView->setGeometry(QRect(10, 80, 581, 481));
+        Loaddata = new QPushButton(centralWidget);
+        Loaddata->setObjectName(QStringLiteral("Loaddata"));
+        Loaddata->setGeometry(QRect(10, 40, 99, 23));
         InsertButton = new QPushButton(centralWidget);
         InsertButton->setObjectName(QStringLiteral("InsertButton"));
-
-        gridLayout->addWidget(InsertButton, 5, 2, 1, 1);
-
+        InsertButton->setGeometry(QRect(735, 171, 75, 23));
+        input_id = new QLineEdit(centralWidget);
+        input_id->setObjectName(QStringLiteral("input_id"));
+        input_id->setGeometry(QRect(735, 67, 133, 20));
+        input_a = new QLineEdit(centralWidget);
+        input_a->setObjectName(QStringLiteral("input_a"));
+        input_a->setGeometry(QRect(735, 93, 133, 20));
+        input_b = new QLineEdit(centralWidget);
+        input_b->setObjectName(QStringLiteral("input_b"));
+        input_b->setGeometry(QRect(735, 119, 133, 20));
+        input_c = new QLineEdit(centralWidget);
+        input_c->setObjectName(QStringLiteral("input_c"));
+        input_c->setGeometry(QRect(735, 145, 133, 20));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(719, 67, 16, 16));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setGeometry(QRect(719, 93, 16, 16));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(719, 119, 16, 16));
+        label_4 = new QLabel(centralWidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(719, 145, 16, 16));
         UpdateButton = new QPushButton(centralWidget);
         UpdateButton->setObjectName(QStringLiteral("UpdateButton"));
-
-        gridLayout->addWidget(UpdateButton, 5, 3, 1, 1);
-
+        UpdateButton->setGeometry(QRect(822, 171, 75, 23));
         DeleteButton = new QPushButton(centralWidget);
         DeleteButton->setObjectName(QStringLiteral("DeleteButton"));
-
-        gridLayout->addWidget(DeleteButton, 5, 4, 1, 1);
-
+        DeleteButton->setGeometry(QRect(910, 171, 75, 23));
         listWidget = new QListWidget(centralWidget);
         listWidget->setObjectName(QStringLiteral("listWidget"));
-
-        gridLayout->addWidget(listWidget, 6, 2, 1, 3);
-
+        listWidget->setGeometry(QRect(735, 200, 256, 192));
+        input_path = new QLineEdit(centralWidget);
+        input_path->setObjectName(QStringLiteral("input_path"));
+        input_path->setGeometry(QRect(60, 10, 421, 20));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(20, 10, 41, 16));
         TableEditor->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TableEditor);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -151,13 +125,16 @@ public:
     {
         TableEditor->setWindowTitle(QApplication::translate("TableEditor", "TableEditor", nullptr));
         Loaddata->setText(QApplication::translate("TableEditor", "Load/Refresh Data", nullptr));
+        InsertButton->setText(QApplication::translate("TableEditor", "Insert", nullptr));
         label->setText(QApplication::translate("TableEditor", "Id", nullptr));
         label_2->setText(QApplication::translate("TableEditor", "A", nullptr));
         label_3->setText(QApplication::translate("TableEditor", "B", nullptr));
         label_4->setText(QApplication::translate("TableEditor", "C", nullptr));
-        InsertButton->setText(QApplication::translate("TableEditor", "Insert", nullptr));
         UpdateButton->setText(QApplication::translate("TableEditor", "Update by Id", nullptr));
         DeleteButton->setText(QApplication::translate("TableEditor", "Delete by Id", nullptr));
+        input_path->setText(QApplication::translate("TableEditor", "../db.sqlite3", nullptr));
+        input_path->setPlaceholderText(QString());
+        label_5->setText(QApplication::translate("TableEditor", "Path:", nullptr));
     } // retranslateUi
 
 };

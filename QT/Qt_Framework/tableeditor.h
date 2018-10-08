@@ -7,7 +7,6 @@
 #include <QMessageBox>
 
 
-
 namespace Ui {
 class TableEditor;
 }
@@ -30,19 +29,14 @@ public:
         mydb.removeDatabase(QSqlDatabase::defaultConnection);
     }
 
-    bool connOpen()
-    {
+    void connOpen()
+    {        
+        QString path;
+        path=ui->input_path->text();
+        ui->listWidget->addItem("Opening " +path);
         mydb=QSqlDatabase::addDatabase("QSQLITE");
-        mydb.setDatabaseName("../db.sqlite3");
-
-            if(!mydb.open()) {
-                qDebug()<<("Failed");
-                qDebug() << mydb.lastError().text();
-            return false;
-        }
-            else {
-            return true;
-        }
+        mydb.setDatabaseName(path);
+        mydb.open();
     }
 
     void showTable()
@@ -51,7 +45,7 @@ public:
         QSqlQueryModel * myModel=new QSqlQueryModel();
         QSqlQuery select;
         if (!select.exec("select * from tab")) {
-            ui->listWidget->addItem("Error");
+            ui->listWidget->addItem(select.lastError().text());
         }
         else {
            myModel->setQuery(select);
@@ -73,25 +67,27 @@ public:
         a=ui->input_a->text();
         b=ui->input_b->text();
         c=ui->input_c->text();
+
         if (action=="insert")
         {
             query="insert into tab (id, a, b, c) values ('"+id+"','"+a+"','"+b+"','"+c+"')";
         }
-        if (action=="update")
+        else if (action=="update")
         {
             query="update tab set id='"+id+"', a='"+a+"', b='"+b+"', c='"+c+"' where id='"+id+"'";
         }
-        if (action=="delete")
+        else if (action=="delete")
         {
             query="delete from tab where id='"+id+"'";
         }
+
         if(SqlQuery.exec(query))
         {
-            QMessageBox::information(this, tr("Success"),tr("Done"));
+           ui->listWidget->addItem("Success execute");
         }
         else
         {
-            QMessageBox::critical(this, tr("Error"), SqlQuery.lastError().text());
+           ui->listWidget->addItem("Execute error");
         }
         connClose();
     }
