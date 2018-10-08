@@ -1,18 +1,18 @@
 ## Используемое при выполнении задания ПО:
 
-## Библиотеки:
+### Библиотеки:
 
 * [python 3.6](https://www.python.org/downloads/release/python-360/)
 * [django 2.1.2](https://www.djangoproject.com/download/)
 * [Qt 5.11.2](https://www.qt.io/download)
 
-## Среды разработки:
+### Среды разработки:
 
 * [Qt Creator 4.7.1](https://www.qt.io/download)
 * [Pycharm 2018.1.3](https://www.jetbrains.com/pycharm/)
 
 
-## СУБД:
+### СУБД:
 * [PostgreSQL 10](https://www.postgresql.org/download/windows/)
 * [pgAdmin 4 v3.1](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v3.1/windows/)
 
