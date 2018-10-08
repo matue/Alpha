@@ -17,10 +17,11 @@
 * [pgAdmin 4 v3.1](https://www.postgresql.org/ftp/pgadmin/pgadmin4/v3.1/windows/)
 
 
-## Примечания:
+## Примечания/полезная информация:
 
 * Приложения написанные на Python/Django Framework и C++/Qt Framework используют один и тот же файл БД "db.sqlite3", расположенный в корне приложений.
 * Для генерации значений и заполнения ими БД использовался python-скрипт ..\Django\table_editor\fixtures\content_generator.py. Скрипт генерирует файл content.json который загружается в БД командой:
   ```
   manage.py loaddata content.json
   ```
+*
