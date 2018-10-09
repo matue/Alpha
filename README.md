@@ -43,9 +43,9 @@
   admin/admin
   ```
 * Шаги для редактирования записей в БД через встроенный административный интерфейс:
-1. Перейти в TABLE_EDITOR - Tabs: http://prntscr.com/l45baj
+1. Перейти в **TABLE_EDITOR - Tabs**: http://prntscr.com/l45baj
 2. Выбрать запись из списка для редактирования: http://prntscr.com/l45bpq
-3. После редактирования нажать SAVE: http://prntscr.com/l45czv
+3. После редактирования нажать **SAVE**: http://prntscr.com/l45czv
 
 ## О работе приложения Qt Framework:
 
