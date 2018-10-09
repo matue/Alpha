@@ -41,7 +41,7 @@ public:
         QSqlQuery sqlQuery;
         QString query=ui->input_query->text();
         if (!sqlQuery.exec(query)) {
-            ui->listWidget->addItem(sqlQuery.lastError().text());
+            ui->listWidget->addItem("Execute error: " +sqlQuery.lastError().text());
             ui->listWidget->scrollToBottom();
         }
         else {
@@ -74,7 +74,7 @@ public:
            ui->listWidget->scrollToBottom();
         }
         else {
-           ui->listWidget->addItem("Execute error");
+           ui->listWidget->addItem("Execute error: " +sqlQuery.lastError().text());
            ui->listWidget->scrollToBottom();
         }
         closeConnection();
