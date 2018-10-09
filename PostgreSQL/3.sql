@@ -3,7 +3,7 @@
 --Каждый разряд считать за одну цифру, т.е. 11 считается как два раза по 1
 
 select regexp_split_to_table(t3."Id"::character varying,'') s,  count(*) count
-from (select t1."Id" from table1 t1 union all select t2."Id"from table2 t2) t3
+from (select t1."Id" from table1 t1 union all select t2."Id" from table2 t2) t3
 group by s
 
 --p.s. здесь мы используем функцию regexp_split_to_table 
