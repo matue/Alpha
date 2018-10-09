@@ -38,7 +38,10 @@
   ```
   manage.py runserver
   ```
-* Admin login/password:
+* Логин/пароль администратора:
   ```
   admin/admin
   ```
+* Шаги для редактирования записей в БД через  встроенный административный интерфейс:
+1. Перейти в TABLE_EDITOR - Tabs:
+http://prntscr.com/l45891
