@@ -10,6 +10,7 @@
 
 * [Qt Creator 4.7.1](https://www.qt.io/download)
 * [Pycharm 2018.1.3](https://www.jetbrains.com/pycharm/)
+* [DataGrip 2018.2.4](https://www.jetbrains.com/datagrip/)
 
 
 ### СУБД:
